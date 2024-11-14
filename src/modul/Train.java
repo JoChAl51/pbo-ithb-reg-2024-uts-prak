@@ -1,11 +1,11 @@
 package modul;
 
 public class Train {
-	int trainNumber;
-	int trainName;
-	TrainType trainType;
+	private int trainNumber;
+	private String trainName;
+	private TrainType trainType;
 
-	public Train(int trainNumber, int trainName, TrainType trainType) {
+	public Train(int trainNumber, String trainName, TrainType trainType) {
 		this.trainNumber = trainNumber;
 		this.trainName = trainName;
 		this.trainType = trainType;
@@ -19,11 +19,11 @@ public class Train {
 		this.trainNumber = trainNumber;
 	}
 
-	public int getTrainName() {
+	public String getTrainName() {
 		return trainName;
 	}
 
-	public void setTrainName(int trainName) {
+	public void setTrainName(String trainName) {
 		this.trainName = trainName;
 	}
 
@@ -36,6 +36,8 @@ public class Train {
 	}
 
 	public String getTrainDetails() {
-		return null;
+		return "Train Number: " + getTrainNumber() +
+				"\n Train Name: " + getTrainName() +
+				"\n Train Type: " + getTrainType();
 	}
 }

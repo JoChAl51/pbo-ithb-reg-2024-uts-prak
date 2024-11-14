@@ -1,11 +1,11 @@
 package modul;
 
 public class Ticket {
-	String ticketID;
-	String seatNumber;
-	ClassType classType;
-	TicketStatus status;
-	double price;
+	private String ticketID;
+	private String seatNumber;
+	private ClassType classType;
+	private TicketStatus status;
+	private double price;
 
 	public Ticket(String ticketID, String seatNumber, ClassType classType, TicketStatus status, double price) {
 		this.ticketID = ticketID;
@@ -56,10 +56,20 @@ public class Ticket {
 	}
 
 	public String printTicket() {
-		return "";
+//		Print ticket tidak akan menampilkan id tiket
+		return "Seat Number: " + getSeatNumber() +
+				"Class Type: " + getClassType() +
+				"Status Ticket: " + getTicketStatus() +
+				"Price: " + getPrice();
 	}
 
 	public String getTicketStatus() {
-		return "";
+		if (status == TicketStatus.PAID) {
+			return "Success";
+		}
+		if (status == TicketStatus.CANCELED) {
+			return "Cancel";
+		}
+		return "Waiting to Pay";
 	}
 }

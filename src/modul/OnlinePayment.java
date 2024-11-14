@@ -1,8 +1,8 @@
 package modul;
 
 public class OnlinePayment implements Payment {
-	String transactionID;
-	String paymentGateaway;
+	private String transactionID;
+	private String paymentGateaway;
 
 	public OnlinePayment(String transactionID, String paymentGateaway) {
 		this.transactionID = transactionID;

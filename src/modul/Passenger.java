@@ -1,10 +1,10 @@
 package modul;
 
 public class Passenger {
-	String passengerID;
-	String passengerName;
-	String passengerGender;
-	String passengerAge;
+	private String passengerID;
+	private String passengerName;
+	private String passengerGender;
+	private String passengerAge;
 
 	public Passenger(String passengerID, String passengerName, String passengerGender, String passengerAge) {
 		this.passengerID = passengerID;
@@ -46,6 +46,9 @@ public class Passenger {
 	}
 
 	public String getPassengerInfo() {
-		return "";
+		return "Passenger ID: " + getPassengerID() +
+				"\nPassenger Name: " + getPassengerName() +
+				"\nPassenger Gender: " + getPassengerGender() +
+				"\nPassenger Age: " + getPassengerAge();
 	}
 }

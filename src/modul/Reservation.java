@@ -3,8 +3,8 @@ package modul;
 import java.util.Date;
 
 public class Reservation {
-	String reservationID;
-	Date reservationDate;
+	private String reservationID;
+	private Date reservationDate;
 
 	public Reservation(String reservationID, Date reservationDate) {
 		this.reservationID = reservationID;
